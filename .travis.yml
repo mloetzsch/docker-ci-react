@@ -6,5 +6,5 @@ before_install:
     - docker build -t mloetzsch/docker-ci-react -f Dockerfile.dev .
 
 script:
-    - docker run mloetzsch/docker-ci-react npm run test -- --coverage
+    - docker run mloetzsch/docker-ci-react npm run test --coverage
     
