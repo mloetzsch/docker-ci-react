@@ -3,7 +3,7 @@ services:
     - docker
     
 before_install:
-    - bocker build -t mloetzsch/docker-ci-react -f Dockerfile.dev .
+    - docker build -t mloetzsch/docker-ci-react -f Dockerfile.dev .
 
 script:
     - docker run mloetzsch/docker-ci-react npm run test -- --coverage
