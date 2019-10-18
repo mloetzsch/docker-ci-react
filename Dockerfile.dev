@@ -1,0 +1,13 @@
+FROM node:alpine
+
+WORKDIR 'app'
+
+COPY package.json .
+RUN npm install
+
+COPY . .
+
+#switch for external update from share
+ENV CHOKIDAR_USEPOLLING='true'
+
+CMD ["npm", "run", "start"]
